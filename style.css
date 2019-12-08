@@ -9,12 +9,32 @@
 
 
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
     background-color: #f5f5f5;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    position: relative;
+}
+
+p, h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h2 {
+    font-family: 'Raleway', serif;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: rgb(55, 143, 251);
+    display: block;
+    margin-left: -20px;
+    margin-top: 15px;
 }
 
 
@@ -22,16 +42,164 @@ body {
 
 .titulek {
     font-family: 'Raleway', serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
+
+header {
+    background-image: url(images/island-hlavicka.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 0.67em;
+    
+}
+
+.perex {
+    padding: 15px;
+    margin-block-start: 0;
+}
+
+.titulek {
+    font-size: 60px;
+}
+
+.autor {
+    margin: 20px;
+    font-style: italic;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.autor::before {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+
 
 
 /* MENU */
 
 
 
+.menu {
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #f5f5f5;
+    font-family: 'Raleway', serif;
+    text-transform: uppercase;   
+
+}
+
+.menu li {
+    display: block;
+}
+
+li {
+    margin: 10px;
+}
+
+.menu a {
+    color:rgb(160, 160, 160);
+    text-decoration: none;
+    padding: 20px 8px;
+}
+
 
 /* OBSAH */
 
+
+img {
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+}
+
+p.popisek {
+    font-size: 12px;
+    color: rgb(160, 160, 160);
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-align: center;
+    font-family: 'Raleway', serif;
+}
+
+.popisek a {
+    color: rgb(160, 160, 160);
+}
+
+
+/* FOTOGALERIE */
+
+.galerie {
+    margin-top: 100px;    
+}
+
+.galerie img {
+    margin-top: 15px;
+}
+
+.galerie .popisek {
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.popisek-copy {
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+/* PATICKA */
+
+footer p,a {
+    font-size: 12px;
+    color: rgb(160, 160, 160);
+}
+
+footer {
+    padding-top: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: inset 0px 68px 66px -62px rgba(150, 148, 150, 0.5);
+    -moz-box-shadow: inset 0px 68px 66px -62px rgba(150,148,150,0.5);
+    box-shadow: inset 0px 68px 66px -62px rgba(150, 148, 150, 0.5);
+}
+
+
+
+
+@media (min-width: 500px) {
+
+/* MENU */
+
+    .menu li {
+        display: inline;
+    }
+
+    
+
+
+/* OBSAH */
+
+    .obsah p.popisek {
+        margin-top: -30px;
+        color: white;
+        text-align: right;
+    }
+
+    .obsah .popisek a {
+        color: white;
+    }
 
 
 
@@ -39,5 +207,174 @@ body {
 
 
 
+    .galerie img {
+        margin-top: 0;
+    }
+
+    /* .galerie {
+        position: relative;
+    } */
+
+    .foto {
+        position: relative;
+        width: 50%;
+        display: inline;
+        margin: 0;
+        overflow: hidden;
+        /* object-fit: cover; */
+        float: left;
+        width: 50%;
+                
+    }
+
+    .foto .popisek {
+        background-color: rgb(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0;
+        position: absolute;
+        bottom 0;
+        width: 100%;
+        
+         
+    }
+
+    .foto .nazev {
+        font-weight: bold;
+    }
+
+    .foto a {
+        color: white;
+    }
+
+    .foto img {
+        width: 100%;
+        display: block;
+    }
+
+    /* .foto:hover .popisek {
+        transform: translate(0, -100%);
+    } */
+   
+
 
 /* PATICKA */
+.nicnefunguje {
+
+    float: left;
+    width: 100%;
+   
+}
+
+ 
+    
+    
+}
+
+
+@media (min-width: 1000px) {
+
+
+/* HLAVICKA */
+
+.perex {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.autor {
+    margin-bottom: 90px;
+}
+
+
+/* MENU */
+
+.menu {
+    float: left;
+    text-align: left;
+    width: 20%;
+    position: absolute;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.menu li {
+    display: block;
+}
+
+/* OBSAH */
+
+    .uvod {
+        position: relative;
+        width: 80%;
+        float: right;
+        margin-top: 25px;
+    }
+
+    .pc {
+        width: 960px;
+        margin: -60px auto 0 auto;
+        background-color: white;
+        -webkit-box-shadow: 0px -1px 15px 4px rgba(150,148,150,0.5);
+        -moz-box-shadow: 0px -1px 15px 4px rgba(150,148,150,0.5);
+        box-shadow: 0px -1px 15px 4px rgba(150,148,150,0.5);
+
+    }
+
+
+    .procisland h2 {
+        padding-right: 200px;
+        
+    }
+
+    .procisland p {
+        padding-right: 200px;
+    }
+
+    .procisland .popisek {
+        padding-right: 0;
+    }
+
+    .covidet h2 {
+        padding-left: 200px;
+        
+    }
+
+    .covidet p {
+        padding-left: 200px;
+    }
+    
+
+    .covidet2 h2 {
+        padding-right: 200px;
+        
+    }
+
+    .covidet2 p {
+        padding-right: 200px;
+    }
+
+
+/* FOTOGALERIE */
+
+    .foto {
+        width: 33.33%;
+    }
+
+/* PATICKA */
+
+footer {
+    box-shadow: none;
+}
+
+
+.nicnefunguje {
+
+        
+    
+}
+
+
+}
